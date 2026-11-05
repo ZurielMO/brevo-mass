@@ -1,0 +1,19 @@
+﻿{
+  "name": "brevo-mass-mail",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Extract unique emails and send LEAGUES CUP mail via Brevo (standalone)",
+  "scripts": {
+    "extract": "node src/extract-emails.js",
+    "extract:firestore": "node src/extract-emails.js --firestore-only",
+    "send": "node src/send-brevo.js",
+    "preview": "node src/send-brevo.js --dry-run --limit=3",
+    "send:test5": "node src/send-brevo.js --limit=5 --no-resume",
+    "send:all": "node src/send-brevo.js"
+  },
+  "dependencies": {
+    "axios": "^1.8.4",
+    "dotenv": "^16.4.7",
+    "firebase-admin": "^13.2.0"
+  }
+}
